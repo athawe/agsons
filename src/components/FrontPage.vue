@@ -5,21 +5,21 @@
   >
     <v-row
       class="text-center"
-      :class="{ 'pb-5': $vuetify.breakpoint.smAndDown }"
+      :class="{ 'pb-5': $vuetify.breakpoint.mdAndDown }"
     >
       <v-col
         cols="12"
       >
-        <h1 class="display-2 font-weight-bold">
-          A G &amp; Sons
+        <h1 class="display-2 textPrimary--text">
+          A-G &amp; Sons
         </h1>
-        <h1 class="display-2 font-weight-bold">
+        <h1 class="display-2 textPrimary--text">
           Janitorial Cleaning Services
         </h1>
       </v-col>
       <v-col
         cols="12"
-        sm="6"
+        md="6"
         :class="{ 'pr-2': $vuetify.breakpoint.mdAndUp }"
       >
         <v-card
@@ -29,7 +29,11 @@
           <v-card-title class="textPrimary--text">
             Services
           </v-card-title>
+          <v-card-text class="textSecondary--text text-left">
+            Excellence is Our Policy!
+          </v-card-text>
           <v-expansion-panels
+            class="text-left"
             accordion
           >
             <v-expansion-panel
@@ -44,7 +48,9 @@
                   </v-icon>
                 </template>
               </v-expansion-panel-header>
-              <v-expansion-panel-content>
+              <v-expansion-panel-content
+                class="caption"
+              >
                 {{ item.data }}
               </v-expansion-panel-content>
             </v-expansion-panel>
@@ -53,7 +59,7 @@
       </v-col>
       <v-col
         cols="12"
-        sm="6"
+        md="6"
         :class="{ 'pl-2': $vuetify.breakpoint.mdAndUp }"
       >
         <v-card
@@ -64,7 +70,7 @@
             Contact Information
           </v-card-title>
           <v-card-text class="textSecondary--text text-left">
-            we'll get back to you
+            Contact us for a free estimate!
           </v-card-text>
           <v-list
             class="text-left"
@@ -87,10 +93,12 @@
               <v-list-item-action>
                 <v-btn
                   v-if="item.actionIcon"
+                  :class="[item.iconClass]"
                   icon
+                  small
                 >
                   <v-icon
-                    color="default"
+                    small
                     v-text="item.actionIcon"
                   />
                 </v-btn>
@@ -138,13 +146,13 @@
   export default {
     data: () => ({
       contactInfo: [
-        { title: 'Address', information: '415 William Street, London, ON, Canada', icon: 'mdi-home', iconClass: 'default white--text', actionIcon: 'mdi-map-marker' },
+        { title: 'Address', information: '419 William Street, London, ON, Canada', icon: 'mdi-home', iconClass: 'default white--text', actionIcon: 'mdi-map-marker' },
         { title: 'Phone Number', information: '(519) 439-6151', icon: 'mdi-phone', iconClass: 'default white--text' },
         { title: 'Email', information: 'auckland@bell.net', icon: 'mdi-at', iconClass: 'default white--text', actionIcon: 'mdi-chevron-right-circle' },
       ],
       services: [
-        { title: 'Weekly Cleaning', data: 'Our excellent staff will ensure that your offices are kept to a high standard of cleanliness, showing great care to abide by your company policies.' },
-        { title: 'Building Maintenance', data: 'We can perform regular services to maintain the quality of your office environment, whether it requires refinishing floors, carpet cleaning, or window cleaning.' },
+        { title: 'Weekly Cleaning', data: 'Our excellent staff will ensure that your buildings are kept to a high standard of cleanliness, showing great care to abide by your company policies. You can expect consistent and punctual work from us in factories, offices, medical buildings, banks, malls, and other institutions.' },
+        { title: 'Building Maintenance', data: 'We can perform regular services to maintain the quality of your office environment, whether it requires a floor care program, concrete floor treatment, carpet or window cleaning.' },
       ],
     }),
   }

@@ -26,10 +26,10 @@ export default new Vuetify({
       dark: {
         primary: colors.deepPurple.darken2,
         accent: colors.deepPurple.accent2,
-        default: colors.deepPurple.base,
+        default: colors.deepPurple.lighten1,
         text: colors.white,
-        textPrimary: colors.grey.darken4,
-        textSecondary: colors.grey.darken1,
+        textPrimary: colors.grey.lighten3,
+        textSecondary: colors.grey.lighten1,
       },
     },
   },

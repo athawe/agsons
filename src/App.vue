@@ -11,29 +11,11 @@
       </v-toolbar-title>
       <v-spacer />
       <v-btn icon>
-        <v-icon>mdi-moon-waning-crescent</v-icon>
+        <v-icon
+          @click="changeTheme"
+          v-text="colourMode"
+        />
       </v-btn>
-      <v-menu
-        left
-        bottom
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn
-            icon
-            v-on="on"
-          >
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in sections"
-            :key="index"
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
     </v-app-bar>
     <v-content>
       <front-page />
@@ -50,11 +32,24 @@
       FrontPage,
     },
     data: () => ({
-      sections: [
-        { title: 'Home' },
-        { title: 'Services' },
-        { title: 'Contact Us' },
-      ],
     }),
+    computed: {
+      colourMode () {
+        if (!this.$vuetify.theme.dark) {
+          return 'mdi-moon-waning-crescent'
+        } else {
+          return 'mdi-white-balance-sunny'
+        }
+      },
+    },
+    methods: {
+      changeTheme () {
+        if (!this.$vuetify.theme.dark) {
+          this.$vuetify.theme.dark = true
+        } else {
+          this.$vuetify.theme.dark = false
+        }
+      },
+    },
   }
 </script>
