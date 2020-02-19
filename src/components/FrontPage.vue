@@ -94,6 +94,8 @@
                 <v-btn
                   v-if="item.actionIcon"
                   :class="[item.iconClass]"
+                  :href="item.link"
+                  target="_blank"
                   icon
                   small
                 >
@@ -146,9 +148,9 @@
   export default {
     data: () => ({
       contactInfo: [
-        { title: 'Address', information: '419 William Street, London, ON, Canada', icon: 'mdi-home', iconClass: 'default white--text', actionIcon: 'mdi-map-marker' },
+        { title: 'Address', information: '419 William Street, London, ON, Canada', icon: 'mdi-home', iconClass: 'default white--text', actionIcon: 'mdi-map-marker', link: 'https://www.google.com/maps/search/?api=1&query=42.988363,-81.234579&query_place_id=ChIJ23lxDwzyLogRLkdDhlSvoe8' },
         { title: 'Phone Number', information: '(519) 439-6151', icon: 'mdi-phone', iconClass: 'default white--text' },
-        { title: 'Email', information: 'auckland@bell.net', icon: 'mdi-at', iconClass: 'default white--text', actionIcon: 'mdi-chevron-right-circle' },
+        { title: 'Email', information: 'auckland@bell.net', icon: 'mdi-at', iconClass: 'default white--text', actionIcon: 'mdi-chevron-right-circle', link: 'mailto:auckland@bell.net' },
       ],
       services: [
         { title: 'Weekly Cleaning', data: 'Our excellent staff will ensure that your buildings are kept to a high standard of cleanliness, showing great care to abide by your company policies. You can expect consistent and punctual work from us in factories, offices, medical buildings, banks, malls, and other institutions.' },
