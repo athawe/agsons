@@ -26,7 +26,8 @@
     "vue-cli-plugin-eslint-config-vuetify": "0.0.3",
     "vue-cli-plugin-vuetify": "^1.1.2",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.4.3"
+    "vuetify-loader": "^1.4.3",
+    "@volar-plugins/vetur": "latest"
   },
   "eslintConfig": {
     "root": true,
