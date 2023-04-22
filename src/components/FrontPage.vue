@@ -5,18 +5,14 @@
       :class="{ 'pb-5': $vuetify.breakpoint.mdAndDown }"
     >
       <v-col cols="12">
-        <h1 class="display-2 textPrimary--text">
-          A-G &amp; Sons
-        </h1>
+        <h1 class="display-2 textPrimary--text">A-G &amp; Sons</h1>
         <h1 class="display-2 textPrimary--text">
           Janitorial Cleaning Services
         </h1>
       </v-col>
       <v-col cols="12" md="6" :class="{ 'pr-2': $vuetify.breakpoint.mdAndUp }">
         <v-card outlined hover>
-          <v-card-title class="textPrimary--text">
-            Services
-          </v-card-title>
+          <v-card-title class="textPrimary--text"> Services </v-card-title>
           <v-card-text class="textSecondary--text text-left">
             Excellence is Our Policy!
           </v-card-text>
@@ -25,9 +21,7 @@
               <v-expansion-panel-header>
                 {{ item.title }}
                 <template v-slot:actions>
-                  <v-icon color="accent">
-                    $expand
-                  </v-icon>
+                  <v-icon color="accent"> $expand </v-icon>
                 </template>
               </v-expansion-panel-header>
               <v-expansion-panel-content class="caption">
@@ -118,13 +112,11 @@ export default {
     services: [
       {
         title: "Regular Cleaning",
-        data:
-          "Our excellent staff will ensure that your buildings are kept to a high standard of cleanliness, showing great care to abide by your company policies and meet your high expectations. You can expect reliable and punctual work from us in factories, offices, medical buildings, banks, malls, and other institutions.",
+        data: "Our excellent staff will ensure that your buildings are kept to a high standard of cleanliness, showing great care to abide by your company policies and meet your high expectations. You can expect reliable and punctual work from us in factories, offices, medical buildings, banks, malls, and other institutions.",
       },
       {
         title: "Total Building Maintainance",
-        data:
-          "We can perform regular services to maintain the quality of your office environment, whether it requires a floor care program, concrete floor treatment, carpet or window cleaning. We do it all!",
+        data: "We can perform regular services to maintain the quality of your office environment, whether it requires a floor care program, concrete floor treatment, carpet or window cleaning. We do it all!",
       },
     ],
   }),
